@@ -5,6 +5,9 @@ require_relative File.join('..', 'spec', 'support', 'simplecov.rb')
 
 require_relative File.join('..', 'lib/ants')
 
+# silence logger
+Ants.logger = Logger.new(nil)
+
 Dir[File.join(__dir__, 'support', '**', '*.rb')].each { |file| require file }
 
 RSpec.configure do |config|

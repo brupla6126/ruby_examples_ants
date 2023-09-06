@@ -6,13 +6,6 @@ require 'logger'
 
 require_relative 'ants/version'
 
-begin
-  Dir[File.join(File.expand_path('..', __dir__), 'lib', '**', '*.rb')].each { |file| require file }
-rescue StandardError => e
-  Ants.logger.error { e.message }
-  Ants.logger.error { e.backtrace }
-end
-
 module Ants
   class Error < StandardError; end
 
@@ -39,4 +32,11 @@ module Ants
   def self.world
     @@world
   end
+end
+
+begin
+  Dir[File.join(File.expand_path('..', __dir__), 'lib', '**', '*.rb')].each { |file| require file }
+rescue StandardError => e
+  Ants.logger.error { e.message }
+  Ants.logger.error { e.backtrace }
 end

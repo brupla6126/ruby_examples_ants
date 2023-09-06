@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'date'
+
 require_relative '../lib/ants'
 
 world = Ants::Worlds::Simulate.new
@@ -10,7 +12,21 @@ context = {
 
 Ants.world = world
 
+colony = Ants::Entities::Colony.new({ position: { x: 0, y: 0 } })
+ant = Ants::Entities::Ant.new({ position: { x: colony.position.x, y: colony.position.y } })
+
+world.entities << colony
+world.entities << ant
+
+last = Time.now.strftime('%Q').to_i
+
 loop do
+  now = Time.now.strftime('%Q').to_i
+
+  context[:delta] = now - last
+
+  last = now
+
   world.tick(context)
 
   break if context[:done]
