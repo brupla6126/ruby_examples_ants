@@ -22,3 +22,6 @@ gem "rubocop", "~> 1.21", groups: %i[development test]
 gem "rubocop-performance", "~> 1.19", groups: %i[development test]
 gem "rubocop-rake", "~> 0.6", groups: %i[development test]
 gem "rubocop-rspec", "~> 2.23", groups: %i[development test]
+
+gem "simplecov", "~> 0.22", groups: %i[development test], require: false
+gem "simplecov-html", "~> 0.12", groups: %i[development test], require: false
