@@ -32,7 +32,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  spec.add_dependency "draco", "~> 0.6"
+  spec.add_dependency "draco-events", "~> 0.2"
+  spec.add_dependency "draco-periodic", "~> 0.2"
+  spec.add_dependency "draco-scenes", "~> 0.2"
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html

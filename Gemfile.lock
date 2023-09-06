@@ -2,6 +2,10 @@ PATH
   remote: .
   specs:
     ants (0.1.0)
+      draco (~> 0.6)
+      draco-events (~> 0.2)
+      draco-periodic (~> 0.2)
+      draco-scenes (~> 0.2)
 
 GEM
   remote: https://rubygems.org/
@@ -13,6 +17,12 @@ GEM
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
     docile (1.4.0)
+    draco (0.6.1)
+    draco-events (0.2.0)
+    draco-periodic (0.2.0)
+      draco (~> 0.6.0)
+    draco-scenes (0.2.0)
+      draco (~> 0.6)
     ffi (1.15.5)
     formatador (1.1.0)
     guard (2.18.0)
