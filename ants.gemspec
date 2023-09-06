@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
+  spec.add_dependency "behavior_tree", "~> 1.1"
   spec.add_dependency "draco", "~> 0.6"
   spec.add_dependency "draco-events", "~> 0.2"
   spec.add_dependency "draco-periodic", "~> 0.2"
