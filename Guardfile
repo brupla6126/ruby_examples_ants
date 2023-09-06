@@ -26,20 +26,20 @@ directories(%w[. lib spec].select { |d| Dir.exist?(d) ? d : UI.warning("Director
 #  * 'just' rspec: 'rspec'
 
 guard :bundler do
-  require 'guard/bundler'
-  require 'guard/bundler/verify'
+  require "guard/bundler"
+  require "guard/bundler/verify"
 
   helper = Guard::Bundler::Verify.new
 
-  files = ['Gemfile']
-  files += Dir['*.gemspec'] if files.any? { |f| helper.uses_gemspec?(f) }
+  files = ["Gemfile"]
+  files += Dir["*.gemspec"] if files.any? { |f| helper.uses_gemspec?(f) }
 
   # Assume files are symlinked from somewhere
   files.each { |file| watch(helper.real_path(file)) }
 end
 
-guard :rspec, cmd: 'bundle exec rspec' do
-  require 'guard/rspec/dsl'
+guard :rspec, cmd: "bundle exec rspec" do
+  require "guard/rspec/dsl"
 
   clearing :on
 
