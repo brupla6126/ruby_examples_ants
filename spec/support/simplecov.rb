@@ -6,6 +6,11 @@ if ENV.fetch('COVERAGE', nil) == '1'
 
   SimpleCov.profiles.define :ants do
     add_filter '/spec/'
+
+    add_group 'Components', 'ants/components'
+    add_group 'Entities', 'ants/entities'
+    add_group 'Systems', 'ants/systems'
+    add_group 'Worlds', 'ants/worlds'
   end
 
   SimpleCov.start :ants do
