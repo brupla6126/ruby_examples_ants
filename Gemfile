@@ -5,6 +5,11 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in ants.gemspec
 gemspec
 
+gem "guard", "~> 2.18", groups: %i[development], require: false
+gem "guard-bundler", "~> 3.0", groups: %i[development], require: false
+gem "guard-rspec", "~> 4.7", groups: %i[development], require: false
+gem "guard-shell", "~> 0.7", groups: %i[development], require: false
+
 gem "rake", "~> 13.0"
 
 gem "rspec", "~> 3.0", groups: %i[development test]
