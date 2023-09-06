@@ -1,3 +1,17 @@
 #!/usr/bin/env ruby
 
-require "ants"
+require_relative '../lib/ants'
+
+world = Ants::Worlds::Simulate.new
+
+context = {
+  done: false
+}
+
+Ants.world = world
+
+loop do
+  world.tick(context)
+
+  break if context[:done]
+end

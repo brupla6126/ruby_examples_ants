@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
-require 'ants'
-
+# simplecov must be first to be loaded
 require_relative File.join('..', 'spec', 'support', 'simplecov.rb')
+
+require_relative File.join('..', 'lib/ants')
 
 Dir[File.join(__dir__, 'support', '**', '*.rb')].each { |file| require file }
 

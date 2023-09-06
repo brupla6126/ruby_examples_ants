@@ -20,7 +20,7 @@ AllCops:
     - vendor/**/*
   Include:
     - ants.gemspec
-    - exe/ants
+    - exe/**/*
     - Gemfile
     - Guardfile
     - lib/**/*
