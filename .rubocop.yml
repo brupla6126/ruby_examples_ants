@@ -1,0 +1,90 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  NewCops: enable
+  SuggestExtensions: true
+  TargetRubyVersion: #{File.read('.ruby-version').strip}
+
+  Exclude:
+    - log/**/*
+    - poc/**/*
+    - tmp/**/*
+    - vendor/**/*
+  Include:
+    - exe/ants
+    - Gemfile
+    - ants.gemspec
+    - Rakefile
+
+# Layout
+Layout/LineLength:
+  Max: 120
+
+# RSpec
+RSpec/NestedGroups:
+  Max: 5
+RSpec/MultipleExpectations:
+  Max: 10
+RSpec/ContextWording:
+  Prefixes:
+    - when
+    - with
+    - without
+    - if
+    - unless
+    - for
+    - but
+    - and
+RSpec/DescribedClass:
+  SkipBlocks: true
+RSpec/MultipleMemoizedHelpers:
+  Enabled : false
+RSpec/NamedSubject:
+  Enabled : false
+
+# Style
+
+Style/DateTime:
+  Enabled: true
+Style/NumericLiterals:
+  Enabled: false
+Style/CommentAnnotation:
+  Enabled: true
+  Keywords:
+    - DEPRECATED
+    - EPHEMERAL
+    - FIXME
+    - HACK
+    - IMPORTANT
+    - NOTE
+    - OPTIMIZE
+    - REMOVE_ME
+    - REVIEW
+    - SECURITY
+    - TODO
+    - WARNING
+Style/Documentation:
+  Enabled: false
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: '[]'
+Style/RegexpLiteral:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: single_quotes
+Style/SymbolArray:
+  EnforcedStyle: percent
+  MinSize: 4
+
