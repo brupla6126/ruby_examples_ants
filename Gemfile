@@ -10,6 +10,8 @@ gem "guard-bundler", "~> 3.0", groups: %i[development], require: false
 gem "guard-rspec", "~> 4.7", groups: %i[development], require: false
 gem "guard-shell", "~> 0.7", groups: %i[development], require: false
 
+gem "lefthook", "~> 1.4", require: false
+
 gem "rake", "~> 13.0"
 
 gem "rspec", "~> 3.0", groups: %i[development test]
