@@ -23,7 +23,9 @@ AllCops:
     - exe/ants
     - Gemfile
     - Guardfile
+    - lib/**/*
     - Rakefile
+    - spec/**/*
 
 # Layout
 Layout/LineLength:
