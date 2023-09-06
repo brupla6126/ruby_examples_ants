@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-if ENV.fetch("COVERAGE", nil) == "1"
-  require "simplecov"
-  require "simplecov-html"
+if ENV.fetch('COVERAGE', nil) == '1'
+  require 'simplecov'
+  require 'simplecov-html'
 
   SimpleCov.profiles.define :ants do
-    add_filter "/spec/"
+    add_filter '/spec/'
   end
 
   SimpleCov.start :ants do
