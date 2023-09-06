@@ -5,6 +5,8 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in ants.gemspec
 gemspec
 
+gem "debug", "~> 1.8", groups: %i[development test], require: true
+
 gem "guard", "~> 2.18", groups: %i[development], require: false
 gem "guard-bundler", "~> 3.0", groups: %i[development], require: false
 gem "guard-rspec", "~> 4.7", groups: %i[development], require: false
