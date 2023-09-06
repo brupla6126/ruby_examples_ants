@@ -7,6 +7,8 @@ if ENV.fetch('COVERAGE', nil) == '1'
   SimpleCov.profiles.define :ants do
     add_filter '/spec/'
 
+    add_group 'Behavior nodes', 'ants/behaviors/nodes'
+    add_group 'Behavior trees', 'ants/behaviors/trees'
     add_group 'Components', 'ants/components'
     add_group 'Entities', 'ants/entities'
     add_group 'Systems', 'ants/systems'

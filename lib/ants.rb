@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'behavior_tree'
 require 'draco'
 require 'draco/scenes'
 require 'logger'
