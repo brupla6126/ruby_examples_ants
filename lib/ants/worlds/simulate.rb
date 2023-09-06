@@ -10,6 +10,7 @@ module Ants
       scene :setup
 
       scene :run do
+        systems Ants::Systems::Ai
         systems Ants::Systems::Motion
       end
     end
