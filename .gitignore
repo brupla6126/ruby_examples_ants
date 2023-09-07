@@ -1,5 +1,6 @@
 /.ruby-version
 /.bundle/
+/.vscode/
 /.yardoc
 /_yardoc/
 /coverage/
