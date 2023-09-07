@@ -9,6 +9,7 @@ module Ants
         entities.each do |entity|
           entity.ai.behaviors.each do |behavior|
             behavior.context = context
+            behavior.context[:entity] = entity
 
             behavior.tick!
 

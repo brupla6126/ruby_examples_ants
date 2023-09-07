@@ -5,9 +5,9 @@ module Ants
     class Simulate < Ants::Worlds::Base
       include Draco::Scenes
 
-      default_scene :setup
+      default_scene :run
 
-      scene :setup
+      # scene :setup
 
       scene :run do
         systems Ants::Systems::Ai

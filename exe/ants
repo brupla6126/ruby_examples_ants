@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'date'
+require 'debug'
 
 require_relative '../lib/ants'
 
@@ -18,16 +19,21 @@ ant = Ants::Entities::Ant.new({ position: { x: colony.position.x, y: colony.posi
 world.entities << colony
 world.entities << ant
 
-last = Time.now.strftime('%Q').to_i
+last = DateTime.now.strftime('%Q').to_i # rubocop:disable Style/DateTime
 
 loop do
-  now = Time.now.strftime('%Q').to_i
+  now = DateTime.now.strftime('%Q').to_i # rubocop:disable Style/DateTime
+  # puts "last: #{last}, now: #{now}"
 
-  context[:delta] = now - last
+  context[:delta] = (now - last)
+
+  # puts "delta: #{context[:delta]}"
 
   last = now
 
   world.tick(context)
+
+  sleep 0.01
 
   break if context[:done]
 end
