@@ -31,6 +31,22 @@ AllCops:
 Layout/LineLength:
   Max: 120
 
+# Metrics
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Metrics/ClassLength:
+  Max: 250
+Metrics/MethodLength:
+  Max: 30
+Metrics/ModuleLength:
+  Max: 250
+
 # RSpec
 RSpec/NestedGroups:
   Max: 5
