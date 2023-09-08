@@ -37,6 +37,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'draco-events', '~> 0.2'
   spec.add_dependency 'draco-periodic', '~> 0.2'
   spec.add_dependency 'draco-scenes', '~> 0.2'
+  spec.add_dependency 'ruby2d', '~> 0.12'
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
