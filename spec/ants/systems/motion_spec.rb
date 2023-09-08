@@ -5,7 +5,7 @@ RSpec.describe Ants::Systems::Motion do
     subject { system.tick(tree_context) }
 
     let(:system) { described_class.new }
-    let(:tree_context) { {} }
+    let(:tree_context) { { width: 200, height: 200 } }
     let(:ant) { Ants::Entities::Ant.new(position:) }
     let(:position) { { x: 0, y: 0 } }
 
@@ -19,8 +19,8 @@ RSpec.describe Ants::Systems::Motion do
     it do
       subject
 
-      expect(ant.position.x).to eq(7.071068)
-      expect(ant.position.y).to eq(7.071068)
+      expect(ant.position.x).to eq(7)
+      expect(ant.position.y).to eq(7)
     end
   end
 end

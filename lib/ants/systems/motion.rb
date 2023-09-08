@@ -15,8 +15,14 @@ module Ants
 
           radians = (entity.orientation.degrees % 360) * Math::PI / 180.0
 
-          entity.position.x += (entity.motion.distance * Math.cos(radians)).round(6)
-          entity.position.y += (entity.motion.distance * Math.sin(radians)).round(6)
+          entity.position.x += (entity.motion.distance * Math.cos(radians)).round(0)
+          entity.position.y += (entity.motion.distance * Math.sin(radians)).round(0)
+
+          entity.position.x = [context[:width], entity.position.x].min
+          entity.position.x = [-context[:width], entity.position.x].max
+
+          entity.position.y = [context[:height], entity.position.y].min
+          entity.position.y = [-context[:height], entity.position.y].max
 
           puts "new position: #{entity.position}"
         end
