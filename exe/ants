@@ -6,14 +6,18 @@ require 'debug'
 require_relative '../lib/ants'
 
 world = Ants::Worlds::Simulate.new
+window = Ants::Helpers::Window.new(width: 640, height: 400, title: 'Ants!')
 
 context = {
-  done: false
+  done: false,
+  width: window.width,
+  height: window.height,
+  window: # IMPROVE: put in context or Ants.window ?
 }
 
 Ants.world = world
 
-colony = Ants::Entities::Colony.new({ position: { x: 0, y: 0 } })
+colony = Ants::Entities::Colony.new({ position: { x: window.center[0], y: window.center[1] } })
 ant = Ants::Entities::Ant.new({ position: { x: colony.position.x, y: colony.position.y } })
 
 world.entities << colony
@@ -21,7 +25,7 @@ world.entities << ant
 
 last = DateTime.now.strftime('%Q').to_i # rubocop:disable Style/DateTime
 
-loop do
+window.update do
   now = DateTime.now.strftime('%Q').to_i # rubocop:disable Style/DateTime
   # puts "last: #{last}, now: #{now}"
 
@@ -32,8 +36,6 @@ loop do
   last = now
 
   world.tick(context)
-
-  sleep 0.01
-
-  break if context[:done]
 end
+
+window.show
