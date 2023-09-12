@@ -11,7 +11,7 @@ AllCops:
   ExtraDetails: true
   NewCops: enable
   SuggestExtensions: true
-  TargetRubyVersion: #{File.read('.ruby-version').strip}
+  TargetRubyVersion: 3.2
 
   Exclude:
     - log/**/*
