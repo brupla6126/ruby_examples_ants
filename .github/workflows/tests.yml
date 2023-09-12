@@ -20,6 +20,8 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
+    - name: Install libraries used by Ruby2d
+      run: apt install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
     - uses: actions/checkout@v3
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
