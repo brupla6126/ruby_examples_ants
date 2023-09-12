@@ -10,11 +10,9 @@ module Ants
         return send(name.to_sym) if respond_to?(name.to_sym)
 
         # look by class name
-        found = entities.detect do |entity|
+        entities.detect do |entity|
           entity.class.name.split('::').last.downcase == name
         end
-
-        return found if found
 
         # TODO: look by identity name
         # entities[Ants::Components::Identity].detect do |entity|
