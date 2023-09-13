@@ -7,6 +7,7 @@ PATH
       draco-events (~> 0.2)
       draco-periodic (~> 0.2)
       draco-scenes (~> 0.2)
+      hash_dot (~> 2.5)
       ruby2d (~> 0.12)
 
 GEM
@@ -55,6 +56,7 @@ GEM
     guard-shell (0.7.2)
       guard (>= 2.0.0)
       guard-compat (~> 1.0)
+    hash_dot (2.5.0)
     io-console (0.6.0)
     irb (1.7.4)
       reline (>= 0.3.6)
@@ -180,6 +182,7 @@ DEPENDENCIES
   guard-bundler (~> 3.0)
   guard-rspec (~> 4.7)
   guard-shell (~> 0.7)
+  hash_dot (~> 2.5)
   lefthook (~> 1.4)
   rake (~> 13.0)
   rspec (~> 3.0)
