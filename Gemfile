@@ -25,5 +25,3 @@ gem 'rubocop-rspec', '~> 2.24', groups: %i[development test]
 
 gem 'simplecov', '~> 0.22', groups: %i[development test], require: false
 gem 'simplecov-html', '~> 0.12', groups: %i[development test], require: false
-
-gem 'solargraph', '~> 0.49', groups: %i[development test], require: true
