@@ -13,13 +13,13 @@ module Ants
           rectangle.x = position.x
           rectangle.y = position.y
         else
-          # TODO: Use spawner for initial position
           rectangle = Rectangle.new(
             width: 4,
             height: 4,
-            x: window.get(:width) / 2,
-            y: window.get(:height) / 2,
-            color: 'green'
+            x: position.x,
+            y: position.y,
+            color: 'silver',
+            z: 100
           )
 
           renderable.shape = rectangle
