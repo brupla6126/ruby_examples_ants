@@ -182,7 +182,6 @@ DEPENDENCIES
   guard-bundler (~> 3.0)
   guard-rspec (~> 4.7)
   guard-shell (~> 0.7)
-  hash_dot (~> 2.5)
   lefthook (~> 1.4)
   rake (~> 13.0)
   rspec (~> 3.0)
