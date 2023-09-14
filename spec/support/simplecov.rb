@@ -12,6 +12,7 @@ if ENV.fetch('COVERAGE', nil) == '1'
     add_group 'Components', 'ants/components'
     add_group 'Entities', 'ants/entities'
     add_group 'Helpers', 'ants/helpers'
+    add_group 'Renderers', 'ants/renderers'
     add_group 'Systems', 'ants/systems'
     add_group 'Worlds', 'ants/worlds'
   end

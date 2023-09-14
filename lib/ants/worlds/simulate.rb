@@ -7,11 +7,10 @@ module Ants
 
       default_scene :run
 
-      # scene :setup
-
       scene :run do
         systems Ants::Systems::Ai
         systems Ants::Systems::Motion
+        systems Ants::Systems::Rendering
       end
     end
   end
