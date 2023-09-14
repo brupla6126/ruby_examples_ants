@@ -1,34 +1,73 @@
 # Ants
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ants`. To experiment with that code, run `bin/console` for an interactive prompt.
+This example simulation shows the use of an Entity Component System framework and Behavior Trees.
 
-TODO: Delete this and the text above, and describe your gem
+🚧 !!! In construction !!! 🚧
 
 ## Installation
+    $ cd your_project_path
+    $ get clone https://github.com/brupla6126/ruby_examples_ants.git
 
-Add this line to your application's Gemfile:
+Install Ruby2D native libraries on Ubuntu
 
-```ruby
-gem 'ants'
-```
+    $ sudo apt-get update && sudo apt-get install -y libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
 
 And then execute:
 
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install ants
+    $ bin/setup
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ exe/ants
 
-## Development
+## Resources
+- Entity Component System
+  - https://en.wikipedia.org/wiki/Entity_component_system
+  - https://www.simplilearn.com/entity-component-system-introductory-guide-article
+  - https://github.com/SanderMertens/ecs-faq
+  - https://www.youtube.com/watch?v=2rW7ALyHaas
+  - https://github.com/guitsaru/draco
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+- Behavior Trees
+  - https://en.wikipedia.org/wiki/Behavior_tree_(artificial_intelligence,_robotics_and_control)
+  - https://www.gamedeveloper.com/programming/behavior-trees-for-ai-how-they-work
+  - https://robohub.org/introduction-to-behavior-trees/
+  - https://www.youtube.com/watch?v=DCZJUvTQV5Q
+  - https://github.com/ChrisVilches/Ruby-Behavior-Tree
+
+## Design
+
+ - Entities
+    - Ant
+    - Colony
+    - Food
+    - Pheromone
+
+ - Components
+    - AI
+    - Motion
+    - Position
+    - Renderable
+
+ - Systems
+    - AI
+    - Bounding
+    - Motion
+    - Rendering
+
+ - Behavior Nodes
+    - Ant::Wander
+    - Ant::LookForFood
+    - Ant::FoodNear
+    - Ant::WalkToFood
+    - Ant::PickupFood
+    - Ant::DropPheromone
+    - Ant::PheromoneNear
+    - Ant::WalkToPheromone
+    - Ant::WalkColony
+    - Ant::DropFood
+
 
 ## Contributing
 
