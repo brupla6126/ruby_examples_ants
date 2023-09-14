@@ -17,10 +17,22 @@ module Ants
 
           def execute
             entity = context[:entity]
+            ticks = context[:ticks]
 
-            entity.orientation.degrees += Random.rand(0..5)
+            if (ticks % 10).zero?
+              entity.motion.velocity_x = 0
+              entity.motion.velocity_y = 0
+            end
 
-            entity.motion.distance = Random.rand(11)
+            if (ticks % 20).zero?
+              entity.motion.velocity_x += Random.rand(3)
+              entity.motion.velocity_y += Random.rand(3)
+
+              entity.motion.velocity_x *= Random.rand(-1..1)
+              entity.motion.velocity_y *= Random.rand(-1..1)
+            end
+
+            puts "velocity: (#{entity.motion.velocity_x}, #{entity.motion.velocity_y})"
           end
         end
       end

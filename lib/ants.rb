@@ -3,6 +3,8 @@
 require 'behavior_tree'
 require 'draco'
 require 'draco/scenes'
+require 'draco/periodic'
+require 'hash_dot'
 require 'logger'
 
 require_relative 'ants/version'

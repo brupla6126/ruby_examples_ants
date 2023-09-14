@@ -3,8 +3,8 @@
 module Ants
   module Components
     class Motion < Draco::Component
-      attribute :speed, default: 0
-      attribute :distance, default: 0
+      attribute :velocity_x, default: 0
+      attribute :velocity_y, default: 0
     end
   end
 end

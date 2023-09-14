@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# frozen_string_literal: true
+
 require 'date'
 require 'debug'
 
@@ -12,8 +14,9 @@ context = {
   done: false,
   width: window.width,
   height: window.height,
+  state: { tick_count: 0 },
   window: # IMPROVE: put in context or Ants.window ?
-}
+}.to_dot
 
 Ants.world = world
 
@@ -31,11 +34,13 @@ window.update do
 
   context[:delta] = (now - last)
 
-  # puts "delta: #{context[:delta]}"
+  context[:ticks] ||= 0
 
   last = now
 
   world.tick(context)
+
+  context[:ticks] += 1
 end
 
 window.show

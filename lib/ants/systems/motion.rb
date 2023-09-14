@@ -3,28 +3,26 @@
 module Ants
   module Systems
     class Motion < Draco::System
+      include Draco::Periodic
+
       filter Ants::Components::Motion
-      filter Ants::Components::Orientation
       filter Ants::Components::Position
+
+      # Only runs the system every 5 ticks
+      run_every 5
 
       def tick(context)
         entities.each do |entity|
-          context[:delta]
+          Ants.logger.debug {  "current position: #{entity.position}" }
 
-          puts "current position: #{entity.position}"
+          entity.position.x += entity.motion.velocity_x
+          entity.position.y += entity.motion.velocity_y
 
-          radians = (entity.orientation.degrees % 360) * Math::PI / 180.0
+          # bounce if hitting left or right
+          entity.motion.velocity_y *= -1 if entity.position.x <= 0 || entity.position.x >= context[:width]
 
-          entity.position.x += (entity.motion.distance * Math.cos(radians)).round(0)
-          entity.position.y += (entity.motion.distance * Math.sin(radians)).round(0)
-
-          entity.position.x = [context[:width], entity.position.x].min
-          entity.position.x = [-context[:width], entity.position.x].max
-
-          entity.position.y = [context[:height], entity.position.y].min
-          entity.position.y = [-context[:height], entity.position.y].max
-
-          puts "new position: #{entity.position}"
+          # bounce if hitting top or bottom
+          entity.motion.velocity_x *= -1 if entity.position.y <= 0 || entity.position.y >= context[:height]
         end
       end
     end
