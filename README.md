@@ -4,21 +4,39 @@ This example simulation shows the use of an Entity Component System framework an
 
 🚧 !!! In construction !!! 🚧
 
+
+## Status
+
+| Branch | Status |
+|--------|--------|
+| [main](https://github.com/brupla6126/ants/tree/main) | [![Run tests suite](https://github.com/brupla6126/ants/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/brupla6126/ants/actions/workflows/tests.yml)|
+| [development](https://github.com/brupla6126/ants/tree/development) | [![Run tests suite](https://github.com/brupla6126/ants/actions/workflows/tests.yml/badge.svg?branch=development)](https://github.com/brupla6126/ants/actions/workflows/tests.yml) |
+
+
 ## Installation
-    $ cd your_project_path
-    $ get clone https://github.com/brupla6126/ruby_examples_ants.git
+```shell
+cd your_project_path
+git clone https://github.com/brupla6126/ruby_examples_ants.git
+cd ruby_examples_ants
+```
 
 Install Ruby2D native libraries on Ubuntu
 
-    $ sudo apt-get update && sudo apt-get install -y libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+```shell
+sudo apt-get update && sudo apt-get install -y libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+```
 
 And then execute:
 
-    $ bin/setup
+```shell
+bin/setup
+```
 
 ## Usage
 
-    $ exe/ants
+```shell
+exe/ants
+```
 
 ## Resources
 - Entity Component System
@@ -36,7 +54,26 @@ And then execute:
   - https://www.youtube.com/watch?v=DCZJUvTQV5Q
   - https://github.com/ChrisVilches/Ruby-Behavior-Tree
 
-## Design
+## Ant types
+ - Foragers
+ - Larvaes
+ - Queen
+ - Soldiers
+ - Workers
+
+## Goals
+ - ✅ Ant wanders around
+ - Forager will look for food
+ - Forager will bring back food to colony
+ - Forager will lay pheromone trail from food source to colony
+ - Queen will initiate colony splitting
+ - Queen will lay eggs
+ - Soldier will carry heavy loads of food
+ - Soldier will defend colony from intruders
+ - Worker will care for queen and larvaes
+ - Worker will feed fungus
+
+## Concepts
 
  - Entities
     - Ant
@@ -56,7 +93,7 @@ And then execute:
     - Motion
     - Rendering
 
- - Behavior Nodes
+ - Behaviors
     - Ant::Wander
     - Ant::LookForFood
     - Ant::FoodNear
@@ -68,6 +105,9 @@ And then execute:
     - Ant::WalkColony
     - Ant::DropFood
 
+ - Renderers
+   - Ant
+   - Colony
 
 ## Contributing
 
