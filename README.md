@@ -9,8 +9,8 @@ This example simulation shows the use of an Entity Component System framework an
 
 | Branch | Status |
 |--------|--------|
-| [main](https://github.com/brupla6126/ants/tree/main) | [![Run tests suite](https://github.com/brupla6126/ants/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/brupla6126/ants/actions/workflows/tests.yml)|
-| [development](https://github.com/brupla6126/ants/tree/development) | [![Run tests suite](https://github.com/brupla6126/ants/actions/workflows/tests.yml/badge.svg?branch=development)](https://github.com/brupla6126/ants/actions/workflows/tests.yml) |
+| [main](https://github.com/brupla6126/ruby_examples_ants/tree/main) | [![Run tests suite](https://github.com/brupla6126/ruby_examples_ants/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/brupla6126/ruby_examples_ants/actions/workflows/tests.yml)|
+| [development](https://github.com/brupla6126/ruby_examples_ants/tree/development) | [![Run tests suite](https://github.com/brupla6126/ruby_examples_ants/actions/workflows/tests.yml/badge.svg?branch=development)](https://github.com/brupla6126/ruby_examples_ants/actions/workflows/tests.yml) |
 
 
 ## Installation
