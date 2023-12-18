@@ -8,6 +8,17 @@ require 'hash_dot'
 require 'logger'
 
 require_relative 'ants/version'
+require_relative 'ants/worlds/base'
+require_relative 'ants/components/motion'
+require_relative 'ants/components/renderable'
+require_relative 'ants/components/position'
+require_relative 'ants/components/ai'
+require_relative 'ants/entities/food_map'
+require_relative 'ants/helpers/window'
+require_relative 'ants/systems/rendering'
+require_relative 'ants/systems/motion'
+require_relative 'ants/systems/ai'
+require_relative 'ants/systems/bounding'
 
 module Ants
   class Error < StandardError; end
