@@ -39,11 +39,13 @@ jobs:
     name: "Rubocop"
     runs-on: ubuntu-latest
     steps:
+      - name: Install libraries used by Ruby2d
+        run: sudo apt-get update && sudo apt-get install -y libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Install Ruby and gems
       # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
-      # change this to (see https://github.com/ruby/setup-ruby#versioning):
+      # c hange this to (see https://github.com/ruby/setup-ruby#versioning):
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
