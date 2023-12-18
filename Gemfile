@@ -14,14 +14,14 @@ gem 'guard-shell', '~> 0.7', groups: %i[development], require: false
 
 gem 'lefthook', '~> 1.5', require: false
 
-gem 'rake', '~> 13.0'
+gem 'rake', '~> 13.1'
 
 gem 'rspec', '~> 3.0', groups: %i[development test]
 
 gem 'rubocop', '~> 1.56', groups: %i[development test]
 gem 'rubocop-performance', '~> 1.19', groups: %i[development test]
 gem 'rubocop-rake', '~> 0.6', groups: %i[development test]
-gem 'rubocop-rspec', '~> 2.24', groups: %i[development test]
+gem 'rubocop-rspec', '~> 2.25', groups: %i[development test]
 
 gem 'simplecov', '~> 0.22', groups: %i[development test], require: false
 gem 'simplecov-html', '~> 0.12', groups: %i[development test], require: false
