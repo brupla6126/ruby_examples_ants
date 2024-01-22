@@ -18,7 +18,7 @@ gem 'rake', '~> 13.1'
 
 gem 'rspec', '~> 3.0', groups: %i[development test]
 
-gem 'rubocop', '~> 1.59', groups: %i[development test]
+gem 'rubocop', '~> 1.60', groups: %i[development test]
 gem 'rubocop-performance', '~> 1.20', groups: %i[development test]
 gem 'rubocop-rake', '~> 0.6', groups: %i[development test]
 gem 'rubocop-rspec', '~> 2.25', groups: %i[development test]
