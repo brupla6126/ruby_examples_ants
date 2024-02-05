@@ -16,7 +16,7 @@ gem 'lefthook', '~> 1.5', require: false
 
 gem 'rake', '~> 13.1'
 
-gem 'rspec', '~> 3.0', groups: %i[development test]
+gem 'rspec', '~> 3.13', groups: %i[development test]
 
 gem 'rubocop', '~> 1.60', groups: %i[development test]
 gem 'rubocop-performance', '~> 1.20', groups: %i[development test]
